@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+}
+.Tema{
+    display: flex;
+      justify-content: center;
+      background-color: #A5BF52;
+      padding: 10px;
+      color: white;
+    img{
+        width: 64px;
+        height: 64px;
+        margin-right: 20px;
+    }
+}
