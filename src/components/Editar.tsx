@@ -57,7 +57,8 @@ function Editar() {
   return (
     <div className='produto'>
       <Tema />
-        <h1>Editar Produto</h1>
+        <h1 style={{color:'#1D572E'}}>Editar Produto</h1>
+        <h3 style={{color:'#1D572E'}}>{produto} {marca}</h3>
         <form >
           <label>Entrada</label>
           <input value={entrada} onChange={(e)=> setEntrada(e.target.value)} type="number" ></input><br/>

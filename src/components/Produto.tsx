@@ -7,7 +7,6 @@ import Tema from './Tema';
 
 
 
-
 function Produto() {
   const nav = useNavigate()
   const [produto, setProduto] = useState<string>('')
@@ -37,7 +36,7 @@ function Produto() {
   return (
     <div className='produto'>
       <Tema />
-        <h1>Novo Produto</h1>
+        <h1 style={{color:'#1D572E'}}>Novo Produto</h1>
         <form >
           <label>Produto</label>
           <input value={produto} onChange={(e)=> setProduto(e.target.value)} type='text' ></input><br/>
@@ -61,11 +60,8 @@ function Produto() {
           <label>Estoque min</label>
           <input value={estoque} onChange={(e)=> setEstoque(e.target.value)} type='number' ></input><br/>
           <button onClick={novoProduto} >Salvar</button>
+          <button onClick={voltar}>Voltar</button>
         </form>
-        
-        <button onClick={voltar}>Voltar</button>
-        
-    
     </div>
   )
 }

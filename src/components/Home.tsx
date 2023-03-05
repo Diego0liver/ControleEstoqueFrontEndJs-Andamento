@@ -18,7 +18,8 @@ interface Typagen{
 
 function Home(){
     const {estoq} = useForms()
-    
+ 
+ 
   return (<>
    <Tema />
    <h1 style={{color:'#1D572E'}}>Controle de estoque</h1>
@@ -26,13 +27,13 @@ function Home(){
     <div className='tabela'>
         <table>
     <tr>
-        <td>Produto</td>
-        <td>Categoria</td>
-        <td>Entrada</td>
-        <td>Saida</td>
-        <td>Total Estoq.</td>
-        <td>Minimo Estoq.</td>
-        <td>Editar</td>
+        <td className='td-top'>Produto</td>
+        <td className='td-top'>Categoria</td>
+        <td className='td-top'>Entrada</td>
+        <td className='td-top'>Saida</td>
+        <td className='td-top'>Total Estoq.</td>
+        <td className='td-top'>Minimo Estoq.</td>
+        <td className='td-top'>Editar</td>
     </tr>
    {estoq.map((posts: Typagen)=>{return(
  <tr key={posts.id}>

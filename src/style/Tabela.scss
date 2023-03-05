@@ -1,18 +1,33 @@
 .tabela{
     display: flex;
     justify-content: center;
-
+   
     table{
         width: 90%;
     }
     tr{
         background-color: #E4EDC0;
     }
-
+   td{
+    padding: 10px;
+   }
+   .td-top{
+    background-color: #C2DC81;
+    border-top:2px solid #A5BF52 ;
+   }
     .totalNegativo{
         background: linear-gradient(0deg, rgba(254,183,183,1) 0%, #E4EDC0 78%);
     }
     .total{
         background-color: #E4EDC0;
+    }
+    button{
+        background-color:#77B278;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+        font-weight: bold;
     }
 }

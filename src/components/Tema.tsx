@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../public/icon.png'
+import Logo from '../public/icon.png'
 import '../style/Tema.scss'
 
 function Tema() {
