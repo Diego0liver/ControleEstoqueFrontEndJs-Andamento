@@ -17,16 +17,20 @@ function Produto() {
 
 
   function novoProduto(){
-     api.post('/post',{
-      titulo: produto,
-      categoria: marca,
-      entrada: entrada,
-      saida: saida,
-      total: entrada - saida,
-      minimo: estoque
-    }).then((nav('/') as any || window.location.reload() ))
-   
+  if(produto && marca && entrada && saida && estoque){
+    api.post('/post',{
+    titulo: produto,
+    categoria: marca,
+    entrada: entrada,
+    saida: saida,
+    total: entrada - saida,
+    minimo: estoque
+  }).then((nav('/') as any || window.location.reload() ))}
+  else{alert("Preencha todos os campos")}
 }
+   
+
+
   
  function voltar(){
     nav('/')

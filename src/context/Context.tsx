@@ -8,12 +8,22 @@ interface TypeChildren{
 }
 
 interface ConteType{
-  loadPost: any
-  estoq: any
-  busfilter: any
-  busfilterCat: any
+  loadPost: ()=>void
+  estoq:  Array<number>
+  busfilter: (props: Target) => void;
+  busfilterCat: (props: Target) => void;
 }
 
+interface Target {
+  target: {
+    value: string
+  };
+}
+
+interface Flt {
+  titulo: string
+  categoria: string
+}
 
 export const ContextApi = createContext<ConteType | undefined>(undefined);
 export function ContextApiProvider({children}: TypeChildren){
@@ -21,17 +31,17 @@ export function ContextApiProvider({children}: TypeChildren){
     const [estoq, setEstoq] = React.useState([])
 
 
-      const busfilter =({target})=>{
+      const busfilter =({target}: Target)=>{
         if(target.value === ''){
             loadPost() 
             return
         }
-        const filt = estoq.filter((f)=>f.titulo.includes(target.value))
+        const filt = estoq.filter((f: Flt)=>f.titulo.includes(target.value))
         setEstoq(filt)
        }
      
-       const busfilterCat =({target})=>{
-        const filt = estoq.filter((f)=>f.categoria.includes(target.value))
+       const busfilterCat =({target}: Target)=>{
+        const filt = estoq.filter((f: Flt)=>f.categoria.includes(target.value))
         setEstoq(filt)
        }
      
